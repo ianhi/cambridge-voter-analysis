@@ -1,6 +1,6 @@
 # Data Source
 
-The data for each year comes in two files (Voter List, Voter History) sourced from the Cambridge Elections commission. If you email `elections2@cambridgema.gov` you can request the raw data, I fond them to be very friendly and responsive.
+The data for each year comes in two files (Voter List, Voter History) sourced from the Cambridge Elections commission. If you email `elections2@cambridgema.gov` you can request the raw data, I found them to be very friendly and responsive.
 
 ## Data cleaning
 
