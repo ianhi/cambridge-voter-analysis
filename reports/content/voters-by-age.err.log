@@ -18,40 +18,72 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+voters_2022 = load_year(
+    "11-8-22 Voter History 49ANP_269498.txt", "49VOT_267488 nov 2022 voting list.txt"
+)
+voters_2020 = load_year(
+    "11-3-20 Voter History 49ANP_225530.txt", "49VOT_224084 november 2020 election.txt"
+)
+voters_2018 = load_year(
+    "11-6-18 Voter History 49ANP_162771.txt", "49VOT_162354 - Nov 6 2018 Election.txt"
+)
+voters_2016 = load_year(
+    "11-8-16 Voter History 49ANP_140283.txt", "49VOT_139226 - Nov 8 2016.txt"
+)
+voters_2014 = load_year(
+    "11-4-2014 State Election 49ANP_120872.txt", "49VOT_120372 - nov 4 2014.txt"
+)
+voters_2012 = load_year(
+    "11.6.2012 StatePres 49ANP_103892.txt", "49VOT_103340 Nov 2012 election.txt"
+)
 
-voters_2022 = load_year("11-8-22 Voter History 49ANP_269498.txt", "49VOT_267488 nov 2022 voting list.txt")
-voters_2020 = load_year("11-3-20 Voter History 49ANP_225530.txt", "49VOT_224084 november 2020 election.txt")
-voters_2018 = load_year("11-6-18 Voter History 49ANP_162771.txt", "49VOT_162354 - Nov 6 2018 Election.txt")
-voters_2016 = load_year("11-8-16 Voter History 49ANP_140283.txt", "49VOT_139226 - Nov 8 2016.txt")
-voters_2014 = load_year("11-4-2014 State Election 49ANP_120872.txt", "49VOT_120372 - nov 4 2014.txt")
-voters_2012 = load_year("11.6.2012 StatePres 49ANP_103892.txt", "49VOT_103340 Nov 2012 election.txt")
-
-voters_2021 = load_year("11-2-21 Voter History 49ANP_239643.txt", "49VOT_238743 Nov 2021 election.txt")
-voters_2019 = load_year("11-5-19 Voter History 49ANP_202374.txt", "49VOT_199524 - Nov 2019 election.txt")
-voters_2017 = load_year("11.7.17 Voter History 49ANP_150723.txt", "49VOT_150177 - nov 7 2017.txt")
-voters_2015 = load_year("11.3.15 Voter History 49ANP_129528.txt", "49VOT_128567 - Nov 3, 2015.txt")
-voters_2013 = load_year("11.5.13 Municipal Election 49ANP_112159.txt", "49VOT_111500 - nov 5, 2013.txt")
-voters_2011 = load_year("11.8.2011 Voter History 49ANP_91255.txt", "49VOT_90931 Nov 2011 election.txt")
+voters_2021 = load_year(
+    "11-2-21 Voter History 49ANP_239643.txt", "49VOT_238743 Nov 2021 election.txt"
+)
+voters_2019 = load_year(
+    "11-5-19 Voter History 49ANP_202374.txt", "49VOT_199524 - Nov 2019 election.txt"
+)
+voters_2017 = load_year(
+    "11.7.17 Voter History 49ANP_150723.txt", "49VOT_150177 - nov 7 2017.txt"
+)
+voters_2015 = load_year(
+    "11.3.15 Voter History 49ANP_129528.txt", "49VOT_128567 - Nov 3, 2015.txt"
+)
+voters_2013 = load_year(
+    "11.5.13 Municipal Election 49ANP_112159.txt", "49VOT_111500 - nov 5, 2013.txt"
+)
+voters_2011 = load_year(
+    "11.8.2011 Voter History 49ANP_91255.txt", "49VOT_90931 Nov 2011 election.txt"
+)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
 Cell [0;32mIn[3], line 1[0m
-[0;32m----> 1[0m voters_2022 [38;5;241m=[39m [43mload_year[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43m11-8-22 Voter History 49ANP_269498.txt[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43m49VOT_267488 nov 2022 voting list.txt[39;49m[38;5;124;43m"[39;49m[43m)[49m
-[1;32m      2[0m voters_2020 [38;5;241m=[39m load_year([38;5;124m"[39m[38;5;124m11-3-20 Voter History 49ANP_225530.txt[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m49VOT_224084 november 2020 election.txt[39m[38;5;124m"[39m)
-[1;32m      3[0m voters_2018 [38;5;241m=[39m load_year([38;5;124m"[39m[38;5;124m11-6-18 Voter History 49ANP_162771.txt[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m49VOT_162354 - Nov 6 2018 Election.txt[39m[38;5;124m"[39m)
+[0;32m----> 1[0m voters_2022 [38;5;241m=[39m [43mload_year[49m[43m([49m
+[1;32m      2[0m [43m    [49m[38;5;124;43m"[39;49m[38;5;124;43m11-8-22 Voter History 49ANP_269498.txt[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43m49VOT_267488 nov 2022 voting list.txt[39;49m[38;5;124;43m"[39;49m
+[1;32m      3[0m [43m)[49m
+[1;32m      4[0m voters_2020 [38;5;241m=[39m load_year(
+[1;32m      5[0m     [38;5;124m"[39m[38;5;124m11-3-20 Voter History 49ANP_225530.txt[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m49VOT_224084 november 2020 election.txt[39m[38;5;124m"[39m
+[1;32m      6[0m )
+[1;32m      7[0m voters_2018 [38;5;241m=[39m load_year(
+[1;32m      8[0m     [38;5;124m"[39m[38;5;124m11-6-18 Voter History 49ANP_162771.txt[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m49VOT_162354 - Nov 6 2018 Election.txt[39m[38;5;124m"[39m
+[1;32m      9[0m )
 
-Cell [0;32mIn[2], line 8[0m, in [0;36mload_year[0;34m(voter_history, voter_list)[0m
-[1;32m      7[0m [38;5;28;01mdef[39;00m [38;5;21mload_year[39m(voter_history: [38;5;28mstr[39m, voter_list: [38;5;28mstr[39m,  ):
-[0;32m----> 8[0m     history [38;5;241m=[39m [43mload_try_encodings[49m[43m([49m[43mvoter_history[49m[43m)[49m
-[1;32m      9[0m     vlist [38;5;241m=[39m load_try_encodings(voter_list)
-[1;32m     10[0m     [38;5;66;03m#     history = pd.read_csv(voter_history, delimiter="|", encoding="utf-8")[39;00m
-[1;32m     11[0m     [38;5;66;03m# except UnicodeDecodeError:[39;00m
-[1;32m     12[0m     [38;5;66;03m#     history = pd.read_csv(voter_history, delimiter="|", encoding="ISO-8859-1")[39;00m
-[1;32m     13[0m     [38;5;66;03m# vlist = pd.read_csv(voter_list, delimiter="|", encoding = "ISO-8859-1")[39;00m
-[1;32m     14[0m     [38;5;66;03m# history = pd.read_csv("11-2-21 Voter History 49ANP_239643.txt", delimiter="|")[39;00m
-[1;32m     15[0m     [38;5;66;03m# vlist = pd.read_csv("49VOT_238743 Nov 2021 election.txt", delimiter="|", encoding = "ISO-8859-1")[39;00m
+Cell [0;32mIn[2], line 12[0m, in [0;36mload_year[0;34m(voter_history, voter_list)[0m
+[1;32m      8[0m [38;5;28;01mdef[39;00m [38;5;21mload_year[39m(
+[1;32m      9[0m     voter_history: [38;5;28mstr[39m,
+[1;32m     10[0m     voter_list: [38;5;28mstr[39m,
+[1;32m     11[0m ):
+[0;32m---> 12[0m     history [38;5;241m=[39m [43mload_try_encodings[49m[43m([49m[43mvoter_history[49m[43m)[49m
+[1;32m     13[0m     vlist [38;5;241m=[39m load_try_encodings(voter_list)
+[1;32m     14[0m     [38;5;66;03m#     history = pd.read_csv(voter_history, delimiter="|", encoding="utf-8")[39;00m
+[1;32m     15[0m     [38;5;66;03m# except UnicodeDecodeError:[39;00m
+[1;32m     16[0m     [38;5;66;03m#     history = pd.read_csv(voter_history, delimiter="|", encoding="ISO-8859-1")[39;00m
+[1;32m     17[0m     [38;5;66;03m# vlist = pd.read_csv(voter_list, delimiter="|", encoding = "ISO-8859-1")[39;00m
+[1;32m     18[0m     [38;5;66;03m# history = pd.read_csv("11-2-21 Voter History 49ANP_239643.txt", delimiter="|")[39;00m
+[1;32m     19[0m     [38;5;66;03m# vlist = pd.read_csv("49VOT_238743 Nov 2021 election.txt", delimiter="|", encoding = "ISO-8859-1")[39;00m
 
 Cell [0;32mIn[2], line 3[0m, in [0;36mload_try_encodings[0;34m(file)[0m
 [1;32m      1[0m [38;5;28;01mdef[39;00m [38;5;21mload_try_encodings[39m(file: [38;5;28mstr[39m):
