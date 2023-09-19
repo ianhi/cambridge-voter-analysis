@@ -22,4 +22,3 @@ For birthdays that did not have an obvious year to correct to (e.g. 1812 -> ???)
 
 ### Headers
 I added headers to the CSV files for 2012 and 2011.
-

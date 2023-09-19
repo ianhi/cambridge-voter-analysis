@@ -1,8 +1,9 @@
-import pandas as pd
 from datetime import timedelta
-import numpy as np
-from numpy import dtype
 from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from numpy import dtype
 
 _history_dtypes = {
     "Party Affiliation ": dtype("O"),
@@ -77,12 +78,6 @@ def load_year(
 ):
     history = load_try_encodings(voter_history, dtypes=_history_dtypes)
     vlist = load_try_encodings(voter_list, _voter_list_dtypes)
-    #     history = pd.read_csv(voter_history, delimiter="|", encoding="utf-8")
-    # except UnicodeDecodeError:
-    #     history = pd.read_csv(voter_history, delimiter="|", encoding="ISO-8859-1")
-    # vlist = pd.read_csv(voter_list, delimiter="|", encoding = "ISO-8859-1")
-    # history = pd.read_csv("11-2-21 Voter History 49ANP_239643.txt", delimiter="|")
-    # vlist = pd.read_csv("49VOT_238743 Nov 2021 election.txt", delimiter="|", encoding = "ISO-8859-1")
     history.rename({c: c.strip() for c in history.columns}, inplace=True, axis=1)
     vlist.rename({c: c.strip() for c in vlist.columns}, inplace=True, axis=1)
 
@@ -123,7 +118,7 @@ def load_year(
         "01AMN0108001",  #   01/01/1808
         # super old - clearly incorrect birthday
         # generated with:
-        # print(voters[voters['age']>118].reset_index()[['Voter ID Number', 'Date of Birth']])
+        # print(voters[voters['age']>118].reset_index()[['Voter ID Number', 'Date of Birth']])  # noqa: E501
         "01ORA0112003",  #   01/01/1812
         "01CAY0112006",  #   01/01/1812
         "01EJD0112000",  #   01/01/1812
@@ -351,23 +346,3 @@ def turnout_by_year_key(df, key, binning: int = None):
     if binning is not None:
         out = _group_turnout(out, key, binning)
     return out
-
-
-# University Stuff
-
-# def
-# grouped = df.reset_index()
-# age_groups = pd.cut(grouped['age'], np.arange(18, 114, 4), include_lowest=True)
-# grouped['age_group'] = age_groups
-# grouped = grouped.groupby(["year", "age_group"]).sum().sort_index().drop("age", axis=1).reset_index()
-# mid_points = [g.mid for g in grouped['age_group']]
-# grouped['mid_points'] = mid_points # convenience for plotting down the line
-# # transforming the intervals into strings for easy using the multiindex
-# # this can't be the best way to do this :(
-# # this is lowkey awful
-# grouped['age_group'] = [f"{int(np.round(g.left))}-{int(g.right)}" for g in grouped['age_group']]
-
-# grouped.index = pd.MultiIndex.from_frame(grouped[['year', 'age_group']])
-# grouped = grouped.drop(['year', 'age_group'], axis=1)
-# grouped['turnout'] = grouped['voted'] / grouped['registered']
-# grouped

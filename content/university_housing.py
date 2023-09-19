@@ -2,6 +2,10 @@ from __future__ import annotations
 
 from collections import defaultdict
 from collections.abc import Iterable
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    import pandas as pd
 import numpy as np
 
 
@@ -18,7 +22,8 @@ def find_housing_idxs(df: pd.DataFrame, housing_locations: dict):
 
         if street_num is not None:
             if not isinstance(street_num, Iterable):
-                # turn single number addr into iterableto match places with multiple addresses
+                # turn single number addr into iterableto match places
+                # with multiple addresses
                 street_num = (street_num,)
                 # multiple valid street numbers
             idx = np.logical_and(
@@ -88,28 +93,30 @@ harvard_housing = {
     "Ware St": (
         (9, 11, 13, 15, 17, 19),
         "WARE ST",
-    ),  # as it stands the function won't differentiate between 13 and 13A ware st so should pick up both
+    ),
+    # as it stands the function won't differentiate
+    # between 13 and 13A ware st so should pick up both
     "Prescott": (list(range(85, 95 + 1, 2)), "PRESCOTT ST"),
 }
 
 harvard_1st_year = [
-        "Greenough HL",
-        "Hurlbut HL",
-        "Pennypacker HL",
-        "Wigglesworth HL",
-        "Grays HL",
-        "Matthews HL",
-        "Weld HL",
-        "Apley CT",
-        "Hollis HL",
-        "Holworthy HL",
-        "Lionel HL",
-        "Mass HL",
-        "Mower HL",
-        "Stoughton HL",
-        "Straus HL",
-        "Canaday HL",
-        "Thayer HL",
+    "Greenough HL",
+    "Hurlbut HL",
+    "Pennypacker HL",
+    "Wigglesworth HL",
+    "Grays HL",
+    "Matthews HL",
+    "Weld HL",
+    "Apley CT",
+    "Hollis HL",
+    "Holworthy HL",
+    "Lionel HL",
+    "Mass HL",
+    "Mower HL",
+    "Stoughton HL",
+    "Straus HL",
+    "Canaday HL",
+    "Thayer HL",
 ]
 
 harvard_1st_year = {name: (None, name.upper()) for name in harvard_1st_year}
