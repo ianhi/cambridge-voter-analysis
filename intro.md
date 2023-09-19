@@ -4,8 +4,8 @@
 This website contains analysis of who voted in every Cambridge election since 2011.
 
 Some key takeaways:
- - There has been a large increase in participation in local election by voters under 40 since 20162016
- - Even year (National + State) elections drive significantly turnout
+ - There has been a large increase in participation in local election by voters under 40 since 2016
+ - Even year (National + State) elections drive significantly higher turnout
     - This effect is amplified in under 40 voters.
  - Undergraduates have extremely low registration and turnout. Especially in local elections.
 
