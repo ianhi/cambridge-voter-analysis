@@ -42,7 +42,7 @@ def find_housing_idxs(df: pd.DataFrame, housing_locations: dict):
     return indices
 
 
-gsas_dorms = ["richards hl", "perkins hl", "conant hl", "child hl"]
+gsas_dorms = ["Richards hl", "Perkins hl", "Conant hl", "Child hl"]
 gsas_dorms = {name: (None, name.upper()) for name in gsas_dorms}
 harvard_ugrad_houses = [
     h + " House"
@@ -64,13 +64,13 @@ harvard_ugrad_houses = [
 harvard_ugrad_houses = {name: (None, name.upper()) for name in harvard_ugrad_houses}
 
 hvd_law_dorms = [
-    "dane hl",
-    "ames hl",
-    "shaw hl",
-    "story hl",
-    "holmes hl",
-    "hastings hl",
-    "north hl",
+    "Dane hl",
+    "Ames hl",
+    "Shaw hl",
+    "Story hl",
+    "Holmes hl",
+    "Hastings hl",
+    "North hl",
 ]
 hvd_law_dorms = {name: (None, name.upper()) for name in hvd_law_dorms}
 
@@ -93,26 +93,23 @@ harvard_housing = {
 }
 
 harvard_1st_year = [
-    h + " HL"
-    for h in [
-        "Greenough",
-        "Hurlbut",
-        "Pennypacker",
-        "Wigglesworth ",
-        "Grays",
-        "Matthews",
-        "Weld",
-        "Apley",
-        "Hollis",
-        "Holworthy",
-        "Lionel",
-        "Mass Hall",
-        "Mower",
-        "Stoughton",
-        "Straus",
-        "Canaday",
-        "Thayer",
-    ]
+        "Greenough HL",
+        "Hurlbut HL",
+        "Pennypacker HL",
+        "Wigglesworth HL",
+        "Grays HL",
+        "Matthews HL",
+        "Weld HL",
+        "Apley CT",
+        "Hollis HL",
+        "Holworthy HL",
+        "Lionel HL",
+        "Mass HL",
+        "Mower HL",
+        "Stoughton HL",
+        "Straus HL",
+        "Canaday HL",
+        "Thayer HL",
 ]
 
 harvard_1st_year = {name: (None, name.upper()) for name in harvard_1st_year}

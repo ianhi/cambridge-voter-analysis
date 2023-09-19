@@ -6,6 +6,4 @@ root: intro
 chapters:
 - file: content/age-analysis
 - file: content/University-Housing-Turnout
-# - file: markdown-notebooks
-# - file: glue-source
-# - file: glue-receiver
+- file: content/data-source
