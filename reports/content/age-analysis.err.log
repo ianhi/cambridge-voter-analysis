@@ -18,17 +18,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-
-plt.figure()
-age_grouped['voted'].loc[MUNICIPAL_YEARS].xs(group, level=1).plot(label=group, style='o--', color=colors[i])
+fig, axs = multi_year_bar(age_grouped, turnout_bar_graph, years_per_row=3, figsize=(16,8))
+fig.supxlabel("Age (4 year bins)")
+fig.supylabel("Number of voters")
+fig.suptitle(
+axs[-1][-1].legend()
+axs[-1,-1].set_xlim([17.5, 85])
+plt.tight_layout();
+# plt.tight_layout()
 ------------------
 
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[5], line 2[0m
-[1;32m      1[0m plt[38;5;241m.[39mfigure()
-[0;32m----> 2[0m age_grouped[[38;5;124m'[39m[38;5;124mvoted[39m[38;5;124m'[39m][38;5;241m.[39mloc[MUNICIPAL_YEARS][38;5;241m.[39mxs([43mgroup[49m, level[38;5;241m=[39m[38;5;241m1[39m)[38;5;241m.[39mplot(label[38;5;241m=[39mgroup, style[38;5;241m=[39m[38;5;124m'[39m[38;5;124mo--[39m[38;5;124m'[39m, color[38;5;241m=[39mcolors[i])
+[0;36m  Cell [0;32mIn[4], line 4[0;36m[0m
+[0;31m    fig.suptitle([0m
+[0m                ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m '(' was never closed
 
-[0;31mNameError[0m: name 'group' is not defined
 

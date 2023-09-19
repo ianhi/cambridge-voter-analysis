@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to your Jupyter Book &#8212; My sample book</title>
+    <title>Introduction &#8212; Cambridge Voter Statistics</title>
   
   
   
@@ -146,7 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">My sample book</p>
+    <p class="title logo__title">Cambridge Voter Statistics</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -155,13 +155,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to your Jupyter Book
+                    Introduction
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="content/age-analysis.html">Turnout by Age</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/University-Housing-Turnout.html">University Housing Turnout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/data-source.html">Data Source</a></li>
 </ul>
 
     </div>
@@ -216,7 +217,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/ianhi/cambridge-voter-analysis" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -233,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ianhi/cambridge-voter-analysis/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +333,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -343,11 +346,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to your Jupyter Book</h1>
+    <h1>Introduction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-requesting-plots">Contributing / Requesting plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-the-analysis-code">See the analysis code</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -357,19 +370,47 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>This website contains analysis of who voted in every Cambridge election since 2011.</p>
+<p>Some key takeaways:</p>
+<ul class="simple">
+<li><p>There has been a large increase in participation in local election by voters under 40 since 20162016</p></li>
+<li><p>Even year (National + State) elections drive significantly turnout</p>
+<ul>
+<li><p>This effect is amplified in under 40 voters.</p></li>
+</ul>
+</li>
+<li><p>Undergraduates have extremely low registration and turnout. Especially in local elections.</p></li>
+</ul>
+<p><img alt="A plot of turnout of different age groups over the years" src="_images/all-elec-line.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is not the only plot! To see more detailed breakdowns navigate using the sidebar on the left.</p>
+</div>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+</div>
+<p>You are free to use, remix any of the plots from this website or the code used to generate it, so long as you provide attribution and link back to this website. This will ensure unfettered access for everyone.</p>
+</section>
+<section id="contributing-requesting-plots">
+<h2>Contributing / Requesting plots<a class="headerlink" href="#contributing-requesting-plots" title="Permalink to this heading">#</a></h2>
+<p>If you have suggestions on how to improve this or are interested in a plot made from the data that isn’t contained here please email: <code class="docutils literal notranslate"><span class="pre">ianhuntisaak+cambvoters&#64;gmail.com</span></code></p>
+</section>
+<section id="see-the-analysis-code">
+<h2>See the analysis code<a class="headerlink" href="#see-the-analysis-code" title="Permalink to this heading">#</a></h2>
+<p>You can see the full notebooks used to generate the plots <a class="reference external" href="https://github.com/ianhi/cambridge-voter-analysis/tree/main/content">on github</a>.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="content/age-analysis.html">Turnout by Age</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/University-Housing-Turnout.html">University Housing Turnout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/data-source.html">Data Source</a></li>
 </ul>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -418,6 +459,22 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-requesting-plots">Contributing / Requesting plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-the-analysis-code">See the analysis code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -427,7 +484,7 @@ It does not go in-depth into any particular topic - check out <a class="referenc
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Ian Hunt-Isaak
 </p>
 
   </div>
