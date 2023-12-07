@@ -3,7 +3,13 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: content/age-analysis
-- file: content/University-Housing-Turnout
-- file: content/data-source
+parts:
+- caption: City Council
+  chapters:
+    - file: city-council/age-analysis
+    - file: city-council/University-Housing-Turnout
+    - file: city-council/data-source
+- caption: State
+  chapters:
+    - file: primaries/25th-middlesex
+    - file: primaries/university
