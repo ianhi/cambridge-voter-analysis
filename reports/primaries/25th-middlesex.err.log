@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/ian/mambaforge/envs/voters/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+YEARS = [2012, 2014, 2016, 2018, 2020, 2022]
+challenger_years = [2012, 2014, 2016, 2018]
+
+cur_registered_df = load_voter_list(
+    "../../data/cambridge/49VOT_285911.txt", date_for_age="2024-09-06"
+)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[2], line 4[0m
+[1;32m      1[0m YEARS [38;5;241m=[39m [[38;5;241m2012[39m, [38;5;241m2014[39m, [38;5;241m2016[39m, [38;5;241m2018[39m, [38;5;241m2020[39m, [38;5;241m2022[39m]
+[1;32m      2[0m challenger_years [38;5;241m=[39m [[38;5;241m2012[39m, [38;5;241m2014[39m, [38;5;241m2016[39m, [38;5;241m2018[39m]
+[0;32m----> 4[0m cur_registered_df [38;5;241m=[39m [43mload_voter_list[49m[43m([49m
+[1;32m      5[0m [43m    [49m[38;5;124;43m"[39;49m[38;5;124;43m../../data/cambridge/49VOT_285911.txt[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mdate_for_age[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m2024-09-06[39;49m[38;5;124;43m"[39;49m
+[1;32m      6[0m [43m)[49m
+
+File [0;32m~/Documents/advocacy/voting/ma-voter-analysis/src/ma_voter_analysis/processing.py:232[0m, in [0;36mload_voter_list[0;34m(file, date_for_age)[0m
+[1;32m    215[0m [38;5;28;01mdef[39;00m [38;5;21mload_voter_list[39m(file: [38;5;28mstr[39m, date_for_age: DatetimeScalar) [38;5;241m-[39m[38;5;241m>[39m pd[38;5;241m.[39mDataFrame:
+[1;32m    216[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[1;32m    217[0m [38;5;124;03m    Load a voter list into a Dataframe.[39;00m
+[1;32m    218[0m 
+[0;32m   (...)[0m
+[1;32m    230[0m [38;5;124;03m        voters with Birthdays well over 100 years old[39;00m
+[1;32m    231[0m [38;5;124;03m    """[39;00m
+[0;32m--> 232[0m     names [38;5;241m=[39m [_voter_list_names, [38;5;28;01mNone[39;00m][[43mhas_header[49m[43m([49m[43mfile[49m[43m)[49m]
+[1;32m    233[0m     vlist [38;5;241m=[39m load_try_encodings(file, _voter_list_dtypes, names[38;5;241m=[39mnames)
+[1;32m    234[0m     vlist[38;5;241m.[39mrename({c: c[38;5;241m.[39mstrip() [38;5;28;01mfor[39;00m c [38;5;129;01min[39;00m vlist[38;5;241m.[39mcolumns}, inplace[38;5;241m=[39m[38;5;28;01mTrue[39;00m, axis[38;5;241m=[39m[38;5;241m1[39m)
+
+File [0;32m~/Documents/advocacy/voting/ma-voter-analysis/src/ma_voter_analysis/processing.py:209[0m, in [0;36mhas_header[0;34m(file)[0m
+[1;32m    197[0m [38;5;250m[39m[38;5;124;03m"""Check if the file has a header.[39;00m
+[1;32m    198[0m 
+[1;32m    199[0m [38;5;124;03mParameters[39;00m
+[0;32m   (...)[0m
+[1;32m    206[0m [38;5;124;03mbool[39;00m
+[1;32m    207[0m [38;5;124;03m"""[39;00m
+[1;32m    208[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 209[0m     [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[43mfile[49m[43m)[49m [38;5;28;01mas[39;00m f:
+[1;32m    210[0m         [38;5;28;01mreturn[39;00m _check_line(f[38;5;241m.[39mreadline())
+[1;32m    211[0m [38;5;28;01mexcept[39;00m [38;5;167;01mUnicodeDecodeError[39;00m:
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '../../data/cambridge/49VOT_285911.txt'
+

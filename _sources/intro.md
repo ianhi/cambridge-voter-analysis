@@ -9,7 +9,7 @@ Some key takeaways:
     - This effect is amplified in under 40 voters.
  - Undergraduates have extremely low registration and turnout. Especially in local elections.
 
-![A plot of turnout of different age groups over the years](content/all-elec-line.png)
+![A plot of turnout of different age groups over the years](imgs/all-elec-line.png)
 
 
 ```{note}
@@ -34,7 +34,7 @@ If you have suggestions on how to improve this or are interested in a plot made 
 
 ## See the analysis code
 
-You can see the full notebooks used to generate the plots [on github](https://github.com/ianhi/cambridge-voter-analysis/tree/main/content).
+You can see the full notebooks used to generate the plots [on github](https://github.com/ianhi/cambridge-voter-analysis/tree/main/).
 
 ```{tableofcontents}
 ```
